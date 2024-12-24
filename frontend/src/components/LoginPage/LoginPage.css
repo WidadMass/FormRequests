@@ -1,0 +1,165 @@
+/* Styles pour la page LoginPage */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f2f2f2, #ffffff);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur principal (logos + formulaire) */
+.login-container {
+  background-color: #f1f0ed;
+  padding: 0px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  height:85%
+  
+}
+
+/* Logo Help Air (en haut à gauche dans le conteneur) */
+.logo-helpair {
+  position: absolute;
+  /* Peut être conservé si nécessaire */
+  top: 10px;
+  left: 20px;
+  width: 150px;
+  /* Taille fixe */
+  height: auto;
+  z-index: 1;
+  /* Assurez-vous qu'il reste au-dessus si nécessaire */
+}
+
+
+/* Logo Help Net (centré au-dessus du formulaire) */
+.login-page .logo-helpnet {
+  max-width: 270px;
+  /* Largeur maximale */
+  width: auto;
+  /* Ajustement automatique */
+  height: auto;
+  /* Conserve les proportions */
+  margin: 40px auto 0px;
+  /* Centré horizontalement */
+  display: block;
+  object-fit: contain;
+  /* Empêche la déformation */
+  padding-top: 30px;
+
+}
+
+
+
+/* Titre du formulaire (Connexion) */
+.login-title {
+  color: #04569a;
+  /* Couleur Pantone 293 */
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+/* Formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #04569a;
+  /* Couleur Pantone 293 */
+  box-shadow: 0px 0px 6px rgba(4, 86, 154, 0.4);
+}
+
+button {
+  padding: 12px;
+  background-color: #ff7f00;
+  /* Couleur Pantone 151 */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e76f00;
+  /* Une version plus sombre */
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+/* Animation subtile lors de l'apparition du conteneur */
+.login-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustements pour les petits écrans */
+@media screen and (max-width: 480px) {
+  .login-container {
+    padding: 20px 15px;
+  }
+
+  .logo-helpair {
+    width: 100px;
+    /* Taille réduite pour petits écrans */
+  }
+
+  .logo-helpnet {
+    max-width: 200px;
+    /* Limite pour petits écrans */
+    margin: 40px auto 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

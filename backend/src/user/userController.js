@@ -46,31 +46,36 @@ exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Vérifiez si l'utilisateur existe
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ message: 'Utilisateur introuvable.' });
     }
 
-    // Vérifiez si le mot de passe est correct
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return res.status(401).json({ message: 'Mot de passe incorrect.' });
     }
 
-    // Générer un token JWT
     const token = jwt.sign(
       { id: user._id, role: user.role },
       process.env.JWT_SECRET,
       { expiresIn: '1h' }
     );
 
-    console.log(`Connexion réussie pour : ${email}`);
-    res.status(200).json({ token });
+    res.status(200).json({
+      token,
+      user: {
+        id: user._id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        role: user.role,
+      },
+    });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 // Récupérer tous les utilisateurs
 exports.getAllUsers = async (req, res) => {
@@ -94,6 +99,19 @@ exports.getUserById = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+exports.getMyProfile = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select('-password'); // Exclut le mot de passe
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur introuvable.' });
+    }
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({ message: 'Erreur serveur.', error });
+  }
+};
+
 // Mettre à jour un utilisateur
 exports.updateUser = async (req, res) => {
   try {
