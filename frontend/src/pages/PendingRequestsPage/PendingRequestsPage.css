@@ -1,0 +1,346 @@
+/* =========================
+   Page Principale
+   ========================= */
+   .pending-requests-page {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', Arial, sans-serif;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Titre principal */
+  .pending-requests-page h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #04569a;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #ff7f00;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* =========================
+     Table des demandes
+     ========================= */
+  .requests-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .requests-table th,
+  .requests-table td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  /* En-tête de table */
+  .requests-table th {
+    background-color: #04569a;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+  }
+  
+  .requests-table th:hover {
+    background-color: #033c7a;
+  }
+  
+  /* Indicateurs de tri (si vous en avez besoin) */
+  .requests-table th.sort-asc::after,
+  .requests-table th.sort-desc::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    border: 5px solid transparent;
+  }
+  
+  .requests-table th.sort-asc::after {
+    border-bottom: 6px solid #fff; /* flèche vers le bas */
+    margin-top: -3px;
+  }
+  
+  .requests-table th.sort-desc::after {
+    border-top: 6px solid #fff; /* flèche vers le haut */
+    margin-top: -3px;
+  }
+  
+  /* Alternance de lignes */
+  .requests-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .requests-table tr:hover {
+    background-color: #eef6fc;
+    cursor: pointer;
+  }
+  
+  /* =========================
+     Statuts plus expressifs
+     ========================= */
+  .status-pending,
+  .status-approved,
+  .status-rejected {
+    font-weight: bold; 
+    letter-spacing: 0.5px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 5px 8px;
+  }
+  
+  /* Couleurs de statut */
+  .status-pending {
+    color: #ff9800;
+  }
+  
+  .status-approved {
+    color: #28a745;
+  }
+  
+  .status-rejected {
+    color: #d9534f;
+  }
+  
+  /* =========================
+     Boutons
+     ========================= */
+  .approve-button,
+  .reject-button,
+  .close-button,
+  .details-button {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  /* Bouton Approuver */
+  .approve-button {
+    background-color: #28a745;
+  }
+  
+  .approve-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+  
+  /* Bouton Rejeter */
+  .reject-button {
+    background-color: #d9534f;
+  }
+  
+  .reject-button:hover {
+    background-color: #c9302c;
+    transform: translateY(-2px);
+  }
+  
+  /* Bouton Fermer (dans la modale) */
+  .close-button {
+    background-color: #ff7f00;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .close-button:hover {
+    background-color: #e76f00;
+    transform: translateY(-2px);
+  }
+  
+  /* Bouton Détails (si besoin) */
+  .details-button {
+    background-color: #04569a;
+  }
+  
+  .details-button:hover {
+    background-color: #033c7a;
+    transform: translateY(-2px);
+  }
+  
+  /* =========================
+     Formulaire Motif de Rejet
+     ========================= */
+  .reject-reason-form {
+    margin-top: 10px;
+  }
+  
+  .reject-reason-form textarea {
+    width: 100%;
+    min-height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    font-family: inherit; 
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .reject-reason-form textarea:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 4px rgba(40, 167, 69, 0.2);
+  }
+  
+  /* =========================
+     Messages (erreur, chargement, etc.)
+     ========================= */
+  .error-message {
+    color: #d9534f;
+    background-color: #fdecea;
+    padding: 12px;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .loading-message {
+    text-align: center;
+    color: #04569a;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .no-requests-message {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+  }
+/* =========================
+   Modale (Overlay + Contenu)
+   ========================= */
+   .pending-requests-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  
+    /* Centrage du contenu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .pending-requests-modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    max-width: 90%;
+  
+    animation: slideIn 0.5s ease-in-out;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  
+  .pending-requests-modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #04569a;
+    text-align: center;
+  }
+  
+  .pending-requests-modal-content p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Pièces jointes */
+  .pending-requests-modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pending-requests-modal-content ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+  
+  .pending-requests-modal-content ul li a {
+    color: #04569a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .pending-requests-modal-content ul li a:hover {
+    color: #033c7a;
+  }
+  
+  /* =========================
+     Responsive
+     ========================= */
+  @media (max-width: 600px) {
+    .requests-table th,
+    .requests-table td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .modal-content {
+      width: 90%;
+      font-size: 14px;
+    }
+  }
+  
+  /* =========================
+     Animations
+     ========================= */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

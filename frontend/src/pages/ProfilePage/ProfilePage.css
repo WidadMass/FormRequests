@@ -1,0 +1,183 @@
+.profile-page {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', Arial, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Titre de la page */
+.profile-page h1 {
+  font-size: 28px;
+  color: #04569a;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 4px solid #ff7f00;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Section principale des détails */
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Ligne pour prénom, nom et rôle */
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-row p {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+  color: #333; /* Noir pour le texte principal */
+}
+
+.profile-row strong {
+  color: #04569a; /* Bleu pour les textes en gras */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Section email */
+.profile-email {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  text-align: center; /* Centre horizontalement le contenu */
+}
+
+/* Force les styles de email en bleu */
+.profile-email strong {
+  color: #04569a ; /* Forcer la couleur bleue */
+  font-weight: bold;
+  font-size: 16px;
+    text-align: center; /* Centre horizontalement le contenu */
+}
+
+/* Section téléphone et changer mot de passe */
+.phone-password-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.phone-edit,
+.password-edit {
+  flex: 1;
+}
+
+.phone-edit strong,
+.password-edit strong,
+.profile-email strong {
+  color: #04569a; /* Bleu pour les titres spécifiques */
+}
+
+.phone-edit input,
+.password-edit input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+}
+
+.phone-edit input:focus,
+.password-edit input:focus {
+  border-color: #04569a;
+  background-color: #eef6fc;
+  box-shadow: 0 0 8px rgba(4, 86, 154, 0.3);
+}
+
+/* Boutons d'action */
+.phone-edit button,
+.password-edit button {
+  margin-top: 20px;
+  padding: 10px 10px;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Bouton Enregistrer */
+.save-button {
+  background-color: #04569a;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #033c7a;
+}
+
+/* Bouton Annuler */
+.cancel-button {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #e76f00;
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: #d9534f;
+  background-color: #fdecea;
+  padding: 12px;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.error-message::before {
+  content: '\26A0'; /* Icône d'avertissement */
+  font-size: 18px;
+  color: #d9534f;
+}
+
+/* Animation subtile */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Réactivité pour les petits écrans */
+@media screen and (max-width: 600px) {
+  .profile-row {
+    flex-direction: column;
+  }
+
+  .phone-password-section {
+    flex-direction: column;
+  }
+
+  .phone-edit button,
+  .password-edit button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+/* src/pages/Dashboard/Dashboard.css */
+
+/* Conteneur principal de la page */
+.dashboard {
+  padding: 20px;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Titre principal */
+.dashboard h1 {
+  font-size: 28px;
+  color: #04569a;
+  margin-bottom: 20px;
+}
+
+/* Widgets */
+.dashboard-widgets {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Permet le retour à la ligne si pas assez d'espace */
+}
+
+/* Style d'un widget */
+.widget {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Ombre légère */
+  flex: 1; /* Prend la largeur disponible */
+  min-width: 250px; /* Taille minimale pour les petits écrans */
+}
+
+.widget h2 {
+  font-size: 20px;
+  color: #ff7f00;
+  margin-bottom: 10px;
+}
+
+.widget p {
+  font-size: 14px;
+  color: #666;
+}

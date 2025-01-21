@@ -1,0 +1,36 @@
+/* src/components/MainContent/MainContent.css */
+
+/* Zone de contenu principal,
+   qu’on décale pour éviter la sidebar et le header fixes */
+.main-content {
+  /* Décalage horizontal pour ne pas recouvrir la sidebar  */
+  margin-left: 80px;
+
+  /* Décalage vertical pour ne pas recouvrir le header  */
+  margin-top: 40px;
+
+  /* Hauteur min pour que la page s’étende si besoin */
+  min-height: calc(100vh - 100px);
+
+  /* Fond et overflow éventuel (si tu veux un scrolling interne) */
+  background-color: #f5f7fa;
+  overflow-y: auto;
+  /* Permet de scroller si le contenu dépasse la fenêtre */
+}
+
+
+@media (max-width: 768px) {
+  .main-content {
+    /* Sur mobile, la sidebar est peut-être masquée 
+
+         => on remet margin-left: 0 pour prendre toute la largeur */
+    margin-left: 0;
+
+
+    /* Si tu réduis aussi la hauteur du header sur mobile,
+         ajuste ici par ex. 70px. */
+    margin-top: 20px;
+
+    padding: 10px;
+  }
+}

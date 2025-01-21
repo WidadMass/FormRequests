@@ -1,0 +1,239 @@
+.user-list-page {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', Arial, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.user-list-page h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #04569a;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #ff7f00;
+  padding-bottom: 10px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+  border-color: #04569a;
+  background-color: #eef6fc;
+  box-shadow: 0 0 8px rgba(4, 86, 154, 0.2);
+  outline: none;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.users-table th,
+.users-table td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: left;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.users-table th {
+  background-color: #04569a;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.users-table td {
+  color: #333;
+}
+
+.users-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.users-table tr:hover {
+  background-color: #eef6fc;
+  cursor: pointer;
+}
+
+.status-active {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.status-inactive {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.toggle-status-button,
+.edit-button,
+.delete-button {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.toggle-status-button {
+  background-color: #04569a;
+}
+
+.edit-button {
+  background-color: #ff7f00;
+}
+
+.delete-button {
+  background-color: #d9534f;
+}
+
+.toggle-status-button:hover {
+  background-color: #033c7a;
+  transform: scale(1.05);
+}
+
+.edit-button:hover {
+  background-color: #e67600;
+  transform: scale(1.05);
+}
+
+.delete-button:hover {
+  background-color: #b52b29;
+  transform: scale(1.05);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeInModal 0.3s ease-in-out;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 600px;
+  max-width: 90%;
+  animation: slideIn 0.4s ease-in-out;
+  margin: 0; /* Supprime les marges inutiles */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le contenu horizontalement */
+}
+
+.modal h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #04569a;
+  text-align: center; /* Centre le texte du titre */
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%; /* Occupe toute la largeur disponible */
+}
+
+.modal form input,
+.modal form select,
+.modal form button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%; /* S'assure que tous les champs sont uniformes */
+}
+
+.modal form input:focus,
+.modal form select:focus {
+  border-color: #04569a;
+  background-color: #eef6fc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(4, 86, 154, 0.3);
+}
+
+.modal form button {
+  background-color: #04569a;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modal form button:hover {
+  background-color: #033c7a;
+}
+
+.modal .close-modal-button {
+  align-self: flex-end; /* Place le bouton de fermeture en haut à droite */
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modal .close-modal-button:hover {
+  background-color: #b52b29;
+}
+
+/* Animations */
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

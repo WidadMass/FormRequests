@@ -1,0 +1,76 @@
+/* IconButton.css */
+
+.icon-button-with-tooltip {
+    position: relative; 
+    display: inline-block;
+  }
+  
+  /* Bouton "icône" */
+  .icon-button {
+    background-color: #ff7f00;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Taille de l'icône */
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon-button:hover {
+    background-color: #e76f00;
+  }
+  
+  /* Ajuste la taille de l'icône si nécessaire */
+  .icon-button svg {
+    width: 1em;
+    height: 1em;
+  }
+  
+  /* Tooltip caché par défaut */
+  .custom-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease; 
+    position: absolute;
+  
+    /* Pour le mettre EN DESSOUS du bouton */
+    top: 120%;            /* le tooltip apparaît 20% en-dessous du parent */
+    left: 50%;
+    transform: translateX(-50%);
+  
+    /* Couleurs et style du tooltip */
+    background-color:  rgb(224, 214, 201); /* Fond gris */
+    color: #e76f00;            /* Texte bleu */
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: nowrap;    
+    font-size: 14px;        
+    pointer-events: none;   
+  }
+  
+  /* Petite flèche du tooltip, en haut du tooltip */
+  .custom-tooltip::after {
+    content: "";
+    position: absolute;
+  
+    /* La flèche se situe en haut du tooltip */
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(224, 214, 201) transparent transparent transparent;
+    /* 
+       Ici, "gray" correspond à la même couleur de fond
+       pour que la flèche se fonde dans le tooltip
+    */
+  }
+  
+  /* Affichage du tooltip au survol du parent */
+  .icon-button-with-tooltip:hover .custom-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  

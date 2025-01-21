@@ -1,0 +1,174 @@
+.new-request-page {
+  max-width: 600px;
+  margin: 20px auto; /* Espacement supplémentaire en haut et en bas */
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', Arial, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  min-height: 300px; /* Hauteur minimale pour éviter que les éléments flottent */
+}
+
+.new-request-page:hover {
+  transform: translateY(-2px); /* Petit effet de survol global */
+}
+
+.new-request-page h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #04569a;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ff7f00;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Contrainte responsive */
+@media (max-width: 768px) {
+  .new-request-page {
+    max-width: 500px;
+  }
+  .new-request-page h1 {
+    font-size: 24px;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Aligner les éléments verticalement */
+  gap: 10px; /* Espacement entre le label et l'input */
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #04569a;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea {
+  resize: vertical; /* Permet de redimensionner verticalement */
+  min-height: 80px; /* Hauteur minimale pour plus de visibilité */
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #033c7a;
+  background-color: #f7faff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #04569a;
+  background-color: #eef6fc;
+  box-shadow: 0 0 8px rgba(4, 86, 154, 0.3);
+  outline: none;
+}
+
+/* Personnalisation du bouton */
+.submit-button {
+  background-color: #04569a;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  letter-spacing: 0.8px;
+}
+
+.submit-button:hover {
+  background-color: #033c7a;
+  transform: translateY(-2px);
+}
+
+/* Messages de retour */
+.success-message,
+.error-message {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.success-message {
+  color: #28a745;
+  background-color: #eafaf1;
+  border-color: #c6e7d5;
+}
+
+.error-message {
+  color: #d9534f;
+  background-color: #fdecea;
+  border-color: #f5c6cb;
+}
+
+/* Animation de fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Uniformisation des champs obligatoires */
+input[required],
+textarea[required],
+select[required] {
+  background-color: #f2f2f2;
+}
+
+input[required]:focus,
+textarea[required]:focus,
+select[required]:focus {
+  background-color: #eef6fc;
+}
+
+/* Centrage des labels et des champs */
+.form-group label {
+  align-self: flex-start;
+}
+
+.form-group textarea,
+.form-group select,
+.form-group input {
+  align-self: stretch;
+}
+
+/* Ajout de style pour un visuel plus propre */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10'%3E%3Cpath d='M7 10L0 0h14z' fill='%2304569a'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10px 10px;
+}

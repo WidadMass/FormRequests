@@ -1,13 +1,106 @@
-/* Styles pour le Header */
-.header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    text-align: center;
+/* ======================
+   HEADER GENERAL
+   ====================== */
+   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    padding: 0 20px;
+    z-index: 1000;
   }
   
-  .header h1 {
-    margin: 0;
-    font-size: 2.5em;
+  /* Partie gauche : logo + titre */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* espace entre logo et titre */
   }
   
+  /* Logo */
+  .logo-helpnet {
+    height: 140px; 
+    width: auto;
+    /* margin-top ou padding-top si besoin, 
+       mais attention à la cohérence avec la height du header */
+  }
+  
+  /* Titre de page */
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #04569a;
+    margin-left: 10px;
+  }
+  
+  /* Conteneur pour les icônes (Messagerie, Notifications, etc.) */
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+  }
+  
+  /* ======================
+     BOUTONS ICÔNES
+     ====================== */
+  .icon-button {
+    background-color: #ff7f00;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Taille de l'icône */
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon-button:hover {
+    background-color: #e76f00;
+  }
+  
+  /* Ajustement si besoin de la taille de l'icône */
+  .icon-button svg {
+    width: 1em;
+    height: 1em;
+  }
+  
+  /* ======================
+     FONTS (optionnel)
+     ====================== */
+  .header,
+  .header-left,
+  .page-title,
+  .header-buttons,
+  .icon-button {
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  @media (max-width: 768px) {
+    /* On réduit un peu la hauteur du header */
+    .header {
+      height: 70px;
+      padding: 0 10px;
+    }
+  
+    /* Le logo est moins haut */
+    .logo-helpnet {
+      height: 60px;
+    }
+  
+    /* Le titre est un peu plus petit */
+    .page-title {
+      font-size: 20px;
+    }
+
+    .header-buttons {
+      gap: 6px;
+    }
+  }
