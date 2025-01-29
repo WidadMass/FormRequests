@@ -41,7 +41,7 @@
 
 
 /* Logo Help Net (centré au-dessus du formulaire) */
-.login-page .logo-helpnet {
+.login-page .logo-RequestFlow {
   max-width: 270px;
   /* Largeur maximale */
   width: auto;
@@ -61,7 +61,7 @@
 
 /* Titre du formulaire (Connexion) */
 .login-title {
-  color: #04569a;
+  color: #155e14;
   /* Couleur Pantone 293 */
   font-size: 22px;
   font-weight: bold;
@@ -85,14 +85,14 @@ input {
 }
 
 input:focus {
-  border-color: #04569a;
+  border-color: #155e14;
   /* Couleur Pantone 293 */
   box-shadow: 0px 0px 6px rgba(4, 86, 154, 0.4);
 }
 
 button {
   padding: 12px;
-  background-color: #ff7f00;
+  background-color: #e84e38;
   /* Couleur Pantone 151 */
   color: #ffffff;
   border: none;
@@ -147,7 +147,7 @@ button:active {
     /* Taille réduite pour petits écrans */
   }
 
-  .logo-helpnet {
+  .logo-RequestFlow {
     max-width: 200px;
     /* Limite pour petits écrans */
     margin: 40px auto 15px;

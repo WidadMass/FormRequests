@@ -4,7 +4,7 @@
   left: 0;
   width: 250px; /* Largeur de la sidebar */
   height: calc(100vh - 100px);
-  background-color: #04569a;
+  background-color: #155e14;
   display: flex;
   flex-direction: column;
   padding: 20px 10px;

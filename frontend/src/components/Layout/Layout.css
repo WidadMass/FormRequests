@@ -23,7 +23,7 @@
 .sidebar {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  background-color: #04569a;
+  background-color: #155e14;
   color: #fff;
   overflow-y: auto; /* Scroll si contenu trop long */
 }

@@ -27,8 +27,8 @@
   }
   
   /* Logo */
-  .logo-helpnet {
-    height: 140px; 
+  .logo-RequestFlow {
+    height: 100px; 
     width: auto;
     /* margin-top ou padding-top si besoin, 
        mais attention à la cohérence avec la height du header */
@@ -38,7 +38,7 @@
   .page-title {
     font-size: 24px;
     font-weight: bold;
-    color: #04569a;
+    color: #155e14;
     margin-left: 10px;
   }
   
@@ -53,7 +53,7 @@
      BOUTONS ICÔNES
      ====================== */
   .icon-button {
-    background-color: #ff7f00;
+    background-color: #e84e38;
     color: #fff;
     border: none;
     padding: 8px 10px;
@@ -91,7 +91,7 @@
     }
   
     /* Le logo est moins haut */
-    .logo-helpnet {
+    .logo-RequestFlow {
       height: 60px;
     }
   

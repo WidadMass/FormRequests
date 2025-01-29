@@ -12,10 +12,10 @@
 /* Titre de la page */
 .profile-page h1 {
   font-size: 28px;
-  color: #04569a;
+  color: #155e14;
   text-align: center;
   margin-bottom: 30px;
-  border-bottom: 4px solid #ff7f00;
+  border-bottom: 4px solid #e84e38;
   padding-bottom: 10px;
   text-transform: uppercase;
 }
@@ -43,7 +43,7 @@
 }
 
 .profile-row strong {
-  color: #04569a; /* Bleu pour les textes en gras */
+  color: #155e14; /* Bleu pour les textes en gras */
   font-size: 16px;
   font-weight: bold;
 }
@@ -58,7 +58,7 @@
 
 /* Force les styles de email en bleu */
 .profile-email strong {
-  color: #04569a ; /* Forcer la couleur bleue */
+  color: #155e14 ; /* Forcer la couleur bleue */
   font-weight: bold;
   font-size: 16px;
     text-align: center; /* Centre horizontalement le contenu */
@@ -79,7 +79,7 @@
 .phone-edit strong,
 .password-edit strong,
 .profile-email strong {
-  color: #04569a; /* Bleu pour les titres spécifiques */
+  color: #155e14; /* Bleu pour les titres spécifiques */
 }
 
 .phone-edit input,
@@ -95,7 +95,7 @@
 
 .phone-edit input:focus,
 .password-edit input:focus {
-  border-color: #04569a;
+  border-color: #155e14;
   background-color: #eef6fc;
   box-shadow: 0 0 8px rgba(4, 86, 154, 0.3);
 }
@@ -116,7 +116,7 @@
 
 /* Bouton Enregistrer */
 .save-button {
-  background-color: #04569a;
+  background-color: #155e14;
   color: white;
 }
 
@@ -126,7 +126,7 @@
 
 /* Bouton Annuler */
 .cancel-button {
-  background-color: #ff7f00;
+  background-color: #e84e38;
   color: white;
 }
 

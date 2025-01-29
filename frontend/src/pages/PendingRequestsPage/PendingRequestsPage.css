@@ -16,9 +16,9 @@
   .pending-requests-page h1 {
     text-align: center;
     font-size: 28px;
-    color: #04569a;
+    color: #155e14;
     margin-bottom: 25px;
-    border-bottom: 3px solid #ff7f00;
+    border-bottom: 3px solid #e84e38;
     padding-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -48,7 +48,7 @@
   
   /* En-tête de table */
   .requests-table th {
-    background-color: #04569a;
+    background-color: #155e14;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -159,7 +159,7 @@
   
   /* Bouton Fermer (dans la modale) */
   .close-button {
-    background-color: #ff7f00;
+    background-color: #e84e38;
     margin-top: 20px;
     width: 100%;
   }
@@ -171,7 +171,7 @@
   
   /* Bouton Détails (si besoin) */
   .details-button {
-    background-color: #04569a;
+    background-color: #155e14;
   }
   
   .details-button:hover {
@@ -222,7 +222,7 @@
   
   .loading-message {
     text-align: center;
-    color: #04569a;
+    color: #155e14;
     font-weight: bold;
     margin: 10px 0;
   }
@@ -269,7 +269,7 @@
   .pending-requests-modal-content h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #04569a;
+    color: #155e14;
     text-align: center;
   }
   
@@ -293,7 +293,7 @@
   }
   
   .pending-requests-modal-content ul li a {
-    color: #04569a;
+    color: #155e14;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;

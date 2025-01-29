@@ -1,6 +1,6 @@
 {
-  "short_name": "HelpNet",
-  "name": "HelpNet Intranet",
+  "short_name": "RequestFlow",
+  "name": "RequestFlow Intranet",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,28 +8,28 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo250.png",
+      "src": "RequestFlow.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo500.png",
+      "src": "RequestFlow.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "helpnet250logo.png",
+      "src": "RequestFlow250logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "helpNet500logo.png",
+      "src": "RequestFlow.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#04569a",
+  "theme_color": "#155e14",
   "background_color": "#ffffff"
 }

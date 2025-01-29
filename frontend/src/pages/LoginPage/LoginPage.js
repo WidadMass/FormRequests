@@ -45,10 +45,10 @@ const LoginPage = () => {
     <div className="login-page">
       <div className="login-container">
         {/* Logo Help Air (en haut à gauche) */}
-        <img src="/logo500.png" alt="Logo Help Air" className="logo-helpair" />
+        <img src="/RequestFlow.png" alt="Logo Help Air" className="logo-helpair" />
 
         {/* Logo Help Net (au-dessus du formulaire) */}
-        <img src="/helpNet500logo.png" alt="Logo Help Net" className="logo-helpnet" />
+        <img src="/RequestFlow.png" alt="Logo Help Net" className="logo-RequestFlow" />
 
         {/* Titre de la page */}
         <h2 className="login-title">Connexion</h2>

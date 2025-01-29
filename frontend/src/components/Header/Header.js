@@ -32,9 +32,9 @@ function Header() {
       <div className="header-left">
         {/* Logo cliquable -> retour Dashboard */}
         <img
-          src="/helpNet500logo.png"
-          alt="HelpNet Logo"
-          className="logo-helpnet"
+          src="/RequestFlow.png"
+          alt="RequestFlow Logo"
+          className="logo-RequestFlow"
           onClick={() => navigate('/dashboard')}
           style={{ cursor: 'pointer' }}
         />

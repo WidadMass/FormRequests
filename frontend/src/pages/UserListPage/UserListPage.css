@@ -12,11 +12,11 @@
 .user-list-page h1 {
   text-align: center;
   font-size: 32px;
-  color: #04569a;
+  color: #155e14;
   margin-bottom: 25px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-bottom: 3px solid #ff7f00;
+  border-bottom: 3px solid #e84e38;
   padding-bottom: 10px;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .search-bar input:focus {
-  border-color: #04569a;
+  border-color: #155e14;
   background-color: #eef6fc;
   box-shadow: 0 0 8px rgba(4, 86, 154, 0.2);
   outline: none;
@@ -59,7 +59,7 @@
 }
 
 .users-table th {
-  background-color: #04569a;
+  background-color: #155e14;
   color: white;
   text-transform: uppercase;
   font-size: 16px;
@@ -102,11 +102,11 @@
 }
 
 .toggle-status-button {
-  background-color: #04569a;
+  background-color: #155e14;
 }
 
 .edit-button {
-  background-color: #ff7f00;
+  background-color: #e84e38;
 }
 
 .delete-button {
@@ -160,7 +160,7 @@
 .modal h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #04569a;
+  color: #155e14;
   text-align: center; /* Centre le texte du titre */
 }
 
@@ -184,14 +184,14 @@
 
 .modal form input:focus,
 .modal form select:focus {
-  border-color: #04569a;
+  border-color: #155e14;
   background-color: #eef6fc;
   outline: none;
   box-shadow: 0 0 5px rgba(4, 86, 154, 0.3);
 }
 
 .modal form button {
-  background-color: #04569a;
+  background-color: #155e14;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
